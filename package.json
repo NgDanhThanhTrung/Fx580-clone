@@ -1,0 +1,12 @@
+{
+  "name": "fx580-web-service",
+  "version": "1.0.0",
+  "description": "Casio fx-580VN X Emulator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
