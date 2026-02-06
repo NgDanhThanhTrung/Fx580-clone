@@ -3,61 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casio fx-580VN X Emulator</title>
+    <title>Casio fx-580VN X</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="calculator">
-        <div class="brand">CASIO <span style="float:right; font-size:12px;">fx-580VN X</span></div>
+        <div class="carbon-layer"></div>
+        <div class="header">
+            <span>CASIO</span>
+            <span style="font-size:10px">fx-580VN X</span>
+            <span class="classwiz">CLASSWIZ</span>
+        </div>
+
         <div class="screen">
-            <div id="status-bar">D | MATH</div>
+            <div id="status">D | Math | ▲</div>
             <div id="upper-display"></div>
             <div id="main-display">0</div>
         </div>
-        
+
+        <div class="navigation-area">
+            <button class="btn-round gold" onclick="handleBtn('shift')">SHIFT</button>
+            <button class="btn-round red" onclick="handleBtn('alpha')">ALPHA</button>
+            <div class="d-pad">
+                <div class="d-btn up"></div><div class="d-btn down"></div>
+                <div class="d-btn left"></div><div class="d-btn right"></div>
+            </div>
+            <button class="btn-round" onclick="handleBtn('menu')">MENU</button>
+            <button class="btn-round" onclick="handleBtn('on')">ON</button>
+        </div>
+
         <div class="keypad">
-            <button class="btn func" onclick="setMode('shift')">SHIFT</button>
-            <button class="btn func" onclick="setMode('alpha')">ALPHA</button>
-            <button class="btn arrow">REPLAY</button>
-            <button class="btn func" onclick="input('menu')">MENU</button>
-            <button class="btn func" onclick="clearAll()">ON</button>
+            <button class="btn blk" onclick="input('optn')">OPTN</button>
+            <button class="btn blk" onclick="input('calc')">CALC</button>
+            <button class="btn blk" onclick="input('sqrt(')">√</button>
+            <button class="btn blk" onclick="input('^2')">x²</button>
+            <button class="btn blk" onclick="input('^')">xⁿ</button>
+            <button class="btn blk" onclick="input('log(')">log</button>
+            <button class="btn blk" onclick="input('/')">■/□</button>
+            <button class="btn blk" onclick="input('sin(')">sin</button>
+            <button class="btn blk" onclick="input('cos(')">cos</button>
+            <button class="btn blk" onclick="input('tan(')">tan</button>
+            <button class="btn blk" onclick="input('sd')">S⇔D</button>
+            <button class="btn blk" onclick="input('(')">(</button>
 
-            <button class="btn math" onclick="input('fraction')">■/□</button>
-            <button class="btn math" onclick="input('sqrt(')">√</button>
-            <button class="btn math" onclick="input('^2')">x²</button>
-            <button class="btn math" onclick="input('^')">xⁿ</button>
-            <button class="btn math" onclick="input('log(')">log</button>
-            <button class="btn math" onclick="input('ln(')">ln</button>
+            <button class="btn wht" onclick="input('7')">7</button>
+            <button class="btn wht" onclick="input('8')">8</button>
+            <button class="btn wht" onclick="input('9')">9</button>
+            <button class="btn blu" onclick="delLast()">DEL</button>
+            <button class="btn blu" onclick="ac()">AC</button>
 
-            <button class="btn math" onclick="input('sin(')">sin</button>
-            <button class="btn math" onclick="input('cos(')">cos</button>
-            <button class="btn math" onclick="input('tan(')">tan</button>
-            <button class="btn math" onclick="input('(')">(</button>
-            <button class="btn math" onclick="input(')')">)</button>
-            <button class="btn math" onclick="deleteLast()">DEL</button>
+            <button class="btn wht" onclick="input('4')">4</button>
+            <button class="btn wht" onclick="input('5')">5</button>
+            <button class="btn wht" onclick="input('6')">6</button>
+            <button class="btn wht" onclick="input('*')">×</button>
+            <button class="btn wht" onclick="input('/')">÷</button>
 
-            <button class="btn num" onclick="input('7')">7</button>
-            <button class="btn num" onclick="input('8')">8</button>
-            <button class="btn num" onclick="input('9')">9</button>
-            <button class="btn del" onclick="clearAll()">AC</button>
-            
-            <button class="btn num" onclick="input('4')">4</button>
-            <button class="btn num" onclick="input('5')">5</button>
-            <button class="btn num" onclick="input('6')">6</button>
-            <button class="btn op" onclick="input('*')">×</button>
-            
-            <button class="btn num" onclick="input('1')">1</button>
-            <button class="btn num" onclick="input('2')">2</button>
-            <button class="btn num" onclick="input('3')">3</button>
-            <button class="btn op" onclick="input('+')">+</button>
-            
-            <button class="btn num" onclick="input('0')">0</button>
-            <button class="btn num" onclick="input('.')">.</button>
-            <button class="btn num" onclick="input('10^')">x10ˣ</button>
-            <button class="btn op" onclick="calculate()">=</button>
+            <button class="btn wht" onclick="input('1')">1</button>
+            <button class="btn wht" onclick="input('2')">2</button>
+            <button class="btn wht" onclick="input('3')">3</button>
+            <button class="btn wht" onclick="input('+')">+</button>
+            <button class="btn wht" onclick="input('-')">−</button>
+
+            <button class="btn wht" onclick="input('0')">0</button>
+            <button class="btn wht" onclick="input('.')">.</button>
+            <button class="btn wht" onclick="input('10^')">x10ˣ</button>
+            <button class="btn wht" onclick="input('ans')">Ans</button>
+            <button class="btn wht" onclick="calculate()">=</button>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js"></script>
     <script src="script.js"></script>
 </body>
